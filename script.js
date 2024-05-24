@@ -24,6 +24,8 @@ function createStore(reducer) {
 
 const store = createStore(reducer);
 
+/*     Please open with browser console     */
+
 store.subscribe(() => {
   console.log(store.getState());
 });
