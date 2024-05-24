@@ -5,24 +5,24 @@ In this challenge, I ventured into the realm of state management by constructing
 ## Achievements
 
 ### SCENARIO 1: Initial State Verification
-```
+`
 When the 'getState' method is executed, and the result is logged to the console with the browser console open, the state displays a count of 0
-```
+`
 
 ### SCENARIO 2: Incrementing the Counter
-```
+`
 By dispatching an 'ADD' action twice without any prior interactions & with the browser console open, the state displaying a count of 2, incrementing the count by 1 for each dispatch
-```
+`
 
 ### SCENARIO 3: Decrementing the Counter
-```
+`
 Given the initial count in the state is 2, upon dispatching a 'SUBTRACT' action with the browser console open, the state reflects a count of 1
-```
+`
 
 ### SCENARIO 4: Resetting the Counter
-```
+`
 Given the current count in the state is 1, the achievement occurs when dispatching a 'RESET' action with the browser console open. In this scenario, the state displays a count of 0
-```
+`
 
 ## Overview of approach
 
