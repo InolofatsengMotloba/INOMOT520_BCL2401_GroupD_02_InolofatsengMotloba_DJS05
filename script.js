@@ -1,18 +1,18 @@
-import { reducer } from "./reducer.js";
+import { reducer } from "./reducer.js"; // Imports reducer function
 import { ADD, SUBTRACT, RESET } from "./action.js"; // Imports action types
 
-//Store implementation using the reducer
+// Store implementation using the reducer
 function createStore(reducer) {
   let currentState = reducer(undefined, {});
   let listeners = [];
-  //Function to get current state and to dispatch actions then udate state
+  // Function to get current state and to dispatch actions then udate state
   return {
     getState: () => currentState,
     dispatch: (action) => {
-      currentState = reducer(currentState, action); //Function to update state
-      listeners.forEach((listener) => listener()); //function to notify all listeners
+      currentState = reducer(currentState, action); // Function that updates the state
+      listeners.forEach((listener) => listener()); // Function that notifies all listeners
     },
-    //Function to subscribe to state changes, add listener to array and then remore listener from the array
+    // Function to subscribe to state changes, add listener to array and then remore listener from the array
     subscribe: (listener) => {
       listeners.push(listener);
       return () => {
